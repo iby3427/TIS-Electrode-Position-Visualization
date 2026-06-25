@@ -19,6 +19,10 @@ planning. It shows the whole-brain surface, anatomical regions, and a
 
 ## Quick start
 
+> New to Python or the terminal? Jump to the
+> [Step-by-step guide for first-time users](#step-by-step-guide-first-time-users)
+> instead — it walks through every command from scratch.
+
 ```bash
 pip install -r requirements.txt    # viewer only needs `flask`
 python tis_server.py               # → http://127.0.0.1:8050
@@ -33,6 +37,105 @@ Use the **Species** dropdown (top-left) to switch **Mouse ↔ Rat**.
   not shipped** (it is a proprietary TIP.lite / IT'IS Foundation asset — see
   [Data sources & licensing](#data-sources--licensing)). Recreate it from your
   own authorized TIP.lite session: [docs/OBTAINING_DATA.md](docs/OBTAINING_DATA.md).
+
+---
+
+## Step-by-step guide (first-time users)
+
+Never used Python or a terminal before? Follow these steps exactly and you will
+have the **Rat** viewer running in a few minutes. You do **not** need to download
+any atlas first — the rat brain, cortex, and all 36 electrodes are already in
+this repository.
+
+### What you'll see
+
+A 3D rat brain you can rotate with the mouse, with the full **36-channel
+electrode montage** drawn on its surface. (Switching to **Mouse** also works, but
+the mouse *brain surface* is proprietary and not shipped — see step 6.)
+
+### 0. Install the two things you need
+
+1. **Python 3.9 or newer.** Download it from <https://www.python.org/downloads/>.
+   On Windows, **tick "Add Python to PATH"** in the installer — this one checkbox
+   saves most beginner headaches. Verify it worked by opening a terminal
+   (Windows: *PowerShell*; macOS/Linux: *Terminal*) and running:
+   ```bash
+   python --version
+   ```
+   If that prints `command not found`, try `python3 --version` instead and use
+   `python3` everywhere below.
+2. **Git** (optional). From <https://git-scm.com/downloads>. If you'd rather not
+   install Git, you can skip it and download the project as a ZIP in step 1.
+
+### 1. Get the project onto your computer
+
+**With Git** (recommended — replace the URL with this repo's address):
+```bash
+git clone https://github.com/<your-username>/TIS-Electrode-Position-Visualization.git
+cd TIS-Electrode-Position-Visualization
+```
+
+**Without Git:** on the GitHub page click the green **Code** button → **Download
+ZIP**, unzip it, then open a terminal *inside* the unzipped folder.
+
+> Tip: not sure you're in the right folder? Run `ls` (macOS/Linux) or `dir`
+> (Windows). You should see `tis_server.py` and `README.md` in the listing.
+
+### 2. (Recommended) Create an isolated environment
+
+This keeps the project's packages from clashing with anything else on your
+machine. It's optional but good practice:
+```bash
+python -m venv .venv
+# Windows (PowerShell):
+.venv\Scripts\Activate.ps1
+# macOS / Linux:
+source .venv/bin/activate
+```
+Your prompt should now start with `(.venv)`.
+
+### 3. Install the one required package
+
+The viewer itself only needs **Flask**:
+```bash
+pip install -r requirements.txt
+```
+(If `pip` isn't found, use `python -m pip install -r requirements.txt`.)
+
+### 4. Start the viewer
+
+```bash
+python tis_server.py
+```
+You'll see a line like `Running on http://127.0.0.1:8050`. Leave this terminal
+open — it's the server. To stop it later, press **Ctrl + C**.
+
+### 5. Open it in your browser
+
+Go to **<http://127.0.0.1:8050>**. You should see the 3D rat brain with
+electrodes. Drag to rotate, scroll to zoom, and use the **Species** dropdown
+(top-left) to switch **Mouse ↔ Rat**. That's the whole project running. 🎉
+
+### 6. Optional — unlock the rest of the data
+
+Everything above runs on the data already in the repo. Two extras need a
+download or a special license, and **both are fully optional**:
+
+| You want… | What to do |
+|---|---|
+| The rat **per-region anatomy overlay** (222 labeled WHS regions) | Download the free **Waxholm Space SD Rat Atlas v4** and run one script — see [docs/OBTAINING_DATA.md](docs/OBTAINING_DATA.md) §A. |
+| Mouse **region meshes** (Allen) | Nothing to do — they auto-download the first time you add a mouse region in the viewer. |
+| The mouse **brain surface** | Proprietary **TIP.lite** asset, not shipped. Recreate it only if you have your own authorized TIP.lite access — see [docs/OBTAINING_DATA.md](docs/OBTAINING_DATA.md) §C. |
+
+### Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `python: command not found` | Use `python3` instead (and `python3 -m pip …`). On Windows, reinstall Python with **"Add to PATH"** ticked. |
+| `pip: command not found` | Run `python -m pip install -r requirements.txt`. |
+| `Address already in use` / port 8050 busy | Another program (or a previous run) holds the port. Close the old terminal, or edit the port at the bottom of [tis_server.py](tis_server.py). |
+| Browser page is blank | Make sure the `python tis_server.py` terminal is still running, and open the exact address `http://127.0.0.1:8050`. |
+| Rat brain shows but anatomy regions don't | Expected — region overlays need step 6 §A. |
 
 ---
 
