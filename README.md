@@ -17,6 +17,20 @@ planning. It shows the whole-brain surface, anatomical regions, and a
 
 ---
 
+## What it looks like
+
+These are real screenshots of the viewer running locally — exactly what you get
+after following the [step-by-step guide](#step-by-step-guide-first-time-users)
+below. Each shows the whole-brain surface, anatomical region overlays, and the
+36-channel electrode montage with a selected TIS pair (CH1± / CH2±). Switch
+species with the **Species** dropdown (top-left).
+
+| Mouse — Allen CCFv3 × TIP.lite | Rat — Waxholm Space SD Atlas v4 |
+|:---:|:---:|
+| ![TIS 3D Navigator, Mouse mode: red cortex mask with electrodes and a TIS pair](TIS-vis-mouse.png) | ![TIS 3D Navigator, Rat mode: region overlays, electrodes, and an electrode tooltip](TIS-vis-rat.png) |
+
+---
+
 ## Quick start
 
 > New to Python or the terminal? Jump to the
@@ -52,6 +66,10 @@ this repository.
 A 3D rat brain you can rotate with the mouse, with the full **36-channel
 electrode montage** drawn on its surface. (Switching to **Mouse** also works, but
 the mouse *brain surface* is proprietary and not shipped — see step 6.)
+
+This is the result you're aiming for:
+
+![Rat viewer running: 3D rat brain with the 36-channel electrode montage](TIS-vis-rat.png)
 
 ### 0. Install the two things you need
 
@@ -367,6 +385,7 @@ TIS-Electrode-Position-Visualization/
 │   └─ retune_electrodes.py  fast electrode re-projection (bregma tuning)
 ├─ archive/data_extraction/  TIP.lite / Allen extraction scripts (provenance)
 ├─ docs/                     OBTAINING_DATA.md, methodology notes
+├─ TIS-vis-mouse.png  TIS-vis-rat.png   viewer screenshots (shown in README)
 ├─ README.md  DATA_LICENSE.md  LICENSE  requirements.txt  .gitignore
 ```
 
