@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TIS 3D In-silico Navigator</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; overflow: hidden; font-family: "Segoe UI", Arial, sans-serif; }
+  #app { display: flex; height: 100vh; }
+
+  /* 좌측 컨트롤 패널 */
+  #panel {
+    width: 340px; flex-shrink: 0; background: #1E2128; color: #e6e6e6;
+    padding: 18px; overflow-y: auto; box-shadow: 2px 0 12px rgba(0,0,0,.5); z-index: 10;
+  }
+  #panel h2 { margin: 0 0 4px; font-size: 18px; }
+  #panel .sub { color: #8B9BB4; font-size: 12px; margin-bottom: 18px; }
+  #panel h4 { color: #8B9BB4; margin: 22px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
+  label.fld { display: block; font-size: 12px; color: #aab; margin: 8px 0 3px; }
+  input[type=text], select {
+    width: 100%; padding: 8px; background: #2C313C; color: #fff;
+    border: 1px solid #444; border-radius: 4px; font-size: 13px;
+  }
+  .row { display: flex; gap: 8px; }
+  .row > div { flex: 1; }
+  button.add { width: 100%; margin-top: 8px; padding: 8px; background: #2F6FED; color: #fff;
+    border: 0; border-radius: 4px; cursor: pointer; font-size: 13px; }
+  button.add:hover { background: #3f7ffd; }
+  #regionChips { margin-top: 10px; }
+  .chip { display: flex; align-items: center; gap: 8px; background: #2C313C; border-radius: 4px;
+    padding: 6px 8px; margin-bottom: 5px; font-size: 13px; }
+  .chip .dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .chip .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .chip .x { cursor: pointer; color: #888; padding: 0 4px; }
+  .chip .x:hover { color: #f55; }
+  .toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; margin: 6px 0; }
+  #status { font-size: 11px; color: #777; margin-top: 14px; min-height: 14px; }
+
+  /* 우측 뷰어 */
+  #view { flex: 1; position: relative; background: #000; }
+  #view canvas { display: block; }
+  #legend { position: absolute; top: 12px; right: 14px; background: rgba(20,22,28,.75);
+    color: #ccc; font-size: 11px; padding: 8px 10px; border-radius: 5px; line-height: 1.7; }
+  #legend b { color: #fff; }
+
+  /* 전극 호버 툴팁 */
+  #tooltip { position: absolute; pointer-events: none; display: none; z-index: 20;
+    background: rgba(20,22,28,.95); color: #eee; border: 1px solid #3a4150;
+    border-radius: 5px; padding: 8px 10px; font-size: 12px; line-height: 1.6;
+    box-shadow: 0 2px 10px rgba(0,0,0,.6); white-space: nowrap; }
+  #tooltip .t-name { font-weight: bold; font-size: 14px; color: #fff; margin-bottom: 4px; }
+  #tooltip .t-row { color: #b9c2d0; }
+  #tooltip .t-row b { color: #fff; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="panel">
+    <h2>TIS 3D Navigator</h2>
+    <div class="sub">client-side WebGL · Mouse / Rat</div>
+
+    <label class="fld">종 (Species)</label>
+    <select id="species" style="margin-bottom:6px">
+      <option value="mouse">Mouse — Allen CCFv3 × TIP-lite</option>
+      <option value="rat">Rat — WHS SD Atlas v4</option>
+    </select>
+
+    <h4>해부 영역</h4>
+    <label class="fld">이름 / 약어로 검색 후 선택</label>
+    <input type="text" id="regionSearch" list="regionList" placeholder="예: VISp, Thalamus..." />
+    <datalist id="regionList"></datalist>
+    <button class="add" id="addRegion">+ 영역 추가</button>
+    <div id="regionChips"></div>
+
+    <h4>전극 페어 설정</h4>
+    <div class="row">
+      <div><label class="fld">CH1 + (red)</label><select id="ch1p"></select></div>
+      <div><label class="fld">CH1 − (blue)</label><select id="ch1n"></select></div>
+    </div>
+    <div class="row">
+      <div><label class="fld">CH2 + (red)</label><select id="ch2p"></select></div>
+      <div><label class="fld">CH2 − (blue)</label><select id="ch2n"></select></div>
+    </div>
+
+    <h4>표시 옵션</h4>
+    <label class="toggle"><input type="checkbox" id="tgBrain" checked /> 전체 뇌 윤곽</label>
+    <label class="toggle"><input type="checkbox" id="tgCortex" checked /> 피질 기준 마스크 (red)</label>
+    <label class="toggle"><input type="checkbox" id="tgAllLabels" /> 전체 전극 라벨</label>
+
+    <div id="status">로딩 중...</div>
+  </div>
+
+  <div id="view">
+    <div id="legend">
+      <b>CH1</b> 빨강(+)·파랑(−)<br />
+      <b>CH2</b> 빨강(+)·파랑(−)<br />
+      점선 = 채널 페어
+    </div>
+    <div id="tooltip"></div>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="/web/main.js"></script>
+</body>
+</html>

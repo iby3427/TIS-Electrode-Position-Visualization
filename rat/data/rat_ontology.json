@@ -1,0 +1,1112 @@
+{
+ "1": {
+  "acronym": "corticofugal tract and corona radiata",
+  "name": "corticofugal tract and corona radiata",
+  "color": "#FF3427"
+ },
+ "3": {
+  "acronym": "Subthalamic nucleus",
+  "name": "Subthalamic nucleus",
+  "color": "#0000FF"
+ },
+ "4": {
+  "acronym": "Molecular cell layer of the cerebellum",
+  "name": "Molecular cell layer of the cerebellum",
+  "color": "#FFFF01"
+ },
+ "5": {
+  "acronym": "Cerebellum, unspecified",
+  "name": "Cerebellum, unspecified",
+  "color": "#00FFFF"
+ },
+ "6": {
+  "acronym": "alveus of the hippocampus",
+  "name": "alveus of the hippocampus",
+  "color": "#FF00FF"
+ },
+ "7": {
+  "acronym": "inferior cerebellar peduncle",
+  "name": "inferior cerebellar peduncle",
+  "color": "#34FF0D"
+ },
+ "10": {
+  "acronym": "Cingulate area 2",
+  "name": "Cingulate area 2",
+  "color": "#1D68EB"
+ },
+ "32": {
+  "acronym": "Entopeduncular nucleus",
+  "name": "Entopeduncular nucleus",
+  "color": "#1AE7FF"
+ },
+ "33": {
+  "acronym": "Ventricular system, unspecified",
+  "name": "Ventricular system, unspecified",
+  "color": "#022CFF"
+ },
+ "34": {
+  "acronym": "medial lemniscus, unspecified",
+  "name": "medial lemniscus, unspecified",
+  "color": "#D4FF00"
+ },
+ "35": {
+  "acronym": "facial nerve, unspecified",
+  "name": "facial nerve, unspecified",
+  "color": "#FF19F0"
+ },
+ "36": {
+  "acronym": "anterior commissure, anterior limb",
+  "name": "anterior commissure, anterior limb",
+  "color": "#7CFC00"
+ },
+ "37": {
+  "acronym": "anterior commissure, posterior limb",
+  "name": "anterior commissure, posterior limb",
+  "color": "#FFBA00"
+ },
+ "38": {
+  "acronym": "ventral hippocampal commissure",
+  "name": "ventral hippocampal commissure",
+  "color": "#AE00E8"
+ },
+ "40": {
+  "acronym": "Septal region",
+  "name": "Septal region",
+  "color": "#FF0800"
+ },
+ "41": {
+  "acronym": "optic nerve",
+  "name": "optic nerve",
+  "color": "#30DA00"
+ },
+ "42": {
+  "acronym": "optic tract and optic chiasm",
+  "name": "optic tract and optic chiasm",
+  "color": "#267EFF"
+ },
+ "43": {
+  "acronym": "Pineal gland",
+  "name": "Pineal gland",
+  "color": "#DAAA3E"
+ },
+ "45": {
+  "acronym": "Spinal cord",
+  "name": "Spinal cord",
+  "color": "#86FF5A"
+ },
+ "46": {
+  "acronym": "commissure of the superior colliculus",
+  "name": "commissure of the superior colliculus",
+  "color": "#21E6FF"
+ },
+ "47": {
+  "acronym": "Brainstem, unspecified",
+  "name": "Brainstem, unspecified",
+  "color": "#9953FF"
+ },
+ "48": {
+  "acronym": "Hypothalamic region, unspecified",
+  "name": "Hypothalamic region, unspecified",
+  "color": "#E278A1"
+ },
+ "50": {
+  "acronym": "Superficial gray layer of the superior colliculus",
+  "name": "Superficial gray layer of the superior colliculus",
+  "color": "#5600DD"
+ },
+ "51": {
+  "acronym": "Periaqueductal gray",
+  "name": "Periaqueductal gray",
+  "color": "#07FF59"
+ },
+ "52": {
+  "acronym": "fornix",
+  "name": "fornix",
+  "color": "#15C0FF"
+ },
+ "53": {
+  "acronym": "mammillotegmental tract",
+  "name": "mammillotegmental tract",
+  "color": "#EEBA00"
+ },
+ "54": {
+  "acronym": "commissural stria terminalis",
+  "name": "commissural stria terminalis",
+  "color": "#ADFF2F"
+ },
+ "55": {
+  "acronym": "Deeper layers of the superior colliculus",
+  "name": "Deeper layers of the superior colliculus",
+  "color": "#E1970F"
+ },
+ "56": {
+  "acronym": "Periventricular gray",
+  "name": "Periventricular gray",
+  "color": "#EB57FF"
+ },
+ "57": {
+  "acronym": "genu of the facial nerve",
+  "name": "genu of the facial nerve",
+  "color": "#FAF4F7"
+ },
+ "58": {
+  "acronym": "Pontine nuclei",
+  "name": "Pontine nuclei",
+  "color": "#00D70B"
+ },
+ "59": {
+  "acronym": "fimbria of the hippocampus",
+  "name": "fimbria of the hippocampus",
+  "color": "#00FF1D"
+ },
+ "60": {
+  "acronym": "fasciculus retroflexus",
+  "name": "fasciculus retroflexus",
+  "color": "#F44345"
+ },
+ "61": {
+  "acronym": "stria medullaris thalami",
+  "name": "stria medullaris thalami",
+  "color": "#00FF00"
+ },
+ "62": {
+  "acronym": "stria terminalis",
+  "name": "stria terminalis",
+  "color": "#EE7533"
+ },
+ "63": {
+  "acronym": "posterior commissure",
+  "name": "posterior commissure",
+  "color": "#FF00DA"
+ },
+ "64": {
+  "acronym": "Glomerular layer of the accessory olfactory bulb",
+  "name": "Glomerular layer of the accessory olfactory bulb",
+  "color": "#0F6DE6"
+ },
+ "65": {
+  "acronym": "Glomerular layer of the olfactory bulb",
+  "name": "Glomerular layer of the olfactory bulb",
+  "color": "#FFE300"
+ },
+ "66": {
+  "acronym": "Olfactory bulb, unspecified",
+  "name": "Olfactory bulb, unspecified",
+  "color": "#FF8700"
+ },
+ "67": {
+  "acronym": "corpus callosum and associated subcortical white matter",
+  "name": "corpus callosum and associated subcortical white matter",
+  "color": "#FF6E00"
+ },
+ "68": {
+  "acronym": "brachium of the superior colliculus",
+  "name": "brachium of the superior colliculus",
+  "color": "#BC20AD"
+ },
+ "69": {
+  "acronym": "inferior colliculus, commissure",
+  "name": "inferior colliculus, commissure",
+  "color": "#FF2A27"
+ },
+ "70": {
+  "acronym": "Central canal",
+  "name": "Central canal",
+  "color": "#27F4FD"
+ },
+ "71": {
+  "acronym": "Interpeduncular nucleus",
+  "name": "Interpeduncular nucleus",
+  "color": "#3FC0FF"
+ },
+ "72": {
+  "acronym": "ascending fibers of the facial nerve",
+  "name": "ascending fibers of the facial nerve",
+  "color": "#B31C35"
+ },
+ "73": {
+  "acronym": "anterior commissure, intrabulbar part",
+  "name": "anterior commissure, intrabulbar part",
+  "color": "#FF4FCE"
+ },
+ "74": {
+  "acronym": "Inferior olive",
+  "name": "Inferior olive",
+  "color": "#00F60E"
+ },
+ "75": {
+  "acronym": "Spinal trigeminal nucleus",
+  "name": "Spinal trigeminal nucleus",
+  "color": "#5BF1FF"
+ },
+ "76": {
+  "acronym": "spinal trigeminal tract",
+  "name": "spinal trigeminal tract",
+  "color": "#FA8072"
+ },
+ "77": {
+  "acronym": "Frontal association cortex",
+  "name": "Frontal association cortex",
+  "color": "#CED307"
+ },
+ "78": {
+  "acronym": "middle cerebellar peduncle",
+  "name": "middle cerebellar peduncle",
+  "color": "#86CC4C"
+ },
+ "79": {
+  "acronym": "transverse fibers of the pons",
+  "name": "transverse fibers of the pons",
+  "color": "#80AAFF"
+ },
+ "80": {
+  "acronym": "habenular commissure",
+  "name": "habenular commissure",
+  "color": "#45EBCA"
+ },
+ "81": {
+  "acronym": "Nucleus of the stria medullaris",
+  "name": "Nucleus of the stria medullaris",
+  "color": "#DE07ED"
+ },
+ "82": {
+  "acronym": "Basal forebrain region, unspecified",
+  "name": "Basal forebrain region, unspecified",
+  "color": "#E1F00D"
+ },
+ "83": {
+  "acronym": "supraoptic decussation",
+  "name": "supraoptic decussation",
+  "color": "#FAAA40"
+ },
+ "84": {
+  "acronym": "medial lemniscus decussation",
+  "name": "medial lemniscus decussation",
+  "color": "#4196FF"
+ },
+ "85": {
+  "acronym": "pyramidal decussation",
+  "name": "pyramidal decussation",
+  "color": "#7209D4"
+ },
+ "93": {
+  "acronym": "Bed nucleus of the stria terminalis",
+  "name": "Bed nucleus of the stria terminalis",
+  "color": "#0008B6"
+ },
+ "94": {
+  "acronym": "Pretectal region",
+  "name": "Pretectal region",
+  "color": "#FF571E"
+ },
+ "95": {
+  "acronym": "Cornu ammonis 3",
+  "name": "Cornu ammonis 3",
+  "color": "#A5836B"
+ },
+ "96": {
+  "acronym": "Dentate gyrus",
+  "name": "Dentate gyrus",
+  "color": "#5B2D0A"
+ },
+ "97": {
+  "acronym": "Cornu ammonis 2",
+  "name": "Cornu ammonis 2",
+  "color": "#FFFF00"
+ },
+ "98": {
+  "acronym": "Cornu ammonis 1",
+  "name": "Cornu ammonis 1",
+  "color": "#D9680D"
+ },
+ "99": {
+  "acronym": "Fasciola cinereum",
+  "name": "Fasciola cinereum",
+  "color": "#FF0000"
+ },
+ "100": {
+  "acronym": "Subiculum",
+  "name": "Subiculum",
+  "color": "#FFC000"
+ },
+ "108": {
+  "acronym": "Postrhinal cortex",
+  "name": "Postrhinal cortex",
+  "color": "#287082"
+ },
+ "109": {
+  "acronym": "Presubiculum",
+  "name": "Presubiculum",
+  "color": "#507BAF"
+ },
+ "110": {
+  "acronym": "Parasubiculum",
+  "name": "Parasubiculum",
+  "color": "#173660"
+ },
+ "112": {
+  "acronym": "Perirhinal area 35",
+  "name": "Perirhinal area 35",
+  "color": "#CD33FF"
+ },
+ "113": {
+  "acronym": "Perirhinal area 36",
+  "name": "Perirhinal area 36",
+  "color": "#7030A0"
+ },
+ "114": {
+  "acronym": "Medial entorhinal cortex",
+  "name": "Medial entorhinal cortex",
+  "color": "#7ABB33"
+ },
+ "115": {
+  "acronym": "Lateral entorhinal cortex",
+  "name": "Lateral entorhinal cortex",
+  "color": "#5A6F2F"
+ },
+ "119": {
+  "acronym": "Vestibular apparatus",
+  "name": "Vestibular apparatus",
+  "color": "#009037"
+ },
+ "120": {
+  "acronym": "Cochlea",
+  "name": "Cochlea",
+  "color": "#00FF1C"
+ },
+ "121": {
+  "acronym": "Cochlear nerve",
+  "name": "Cochlear nerve",
+  "color": "#FD9400"
+ },
+ "122": {
+  "acronym": "Vestibular nerve",
+  "name": "Vestibular nerve",
+  "color": "#FD3200"
+ },
+ "123": {
+  "acronym": "Ventral cochlear nucleus, granule cell layer",
+  "name": "Ventral cochlear nucleus, granule cell layer",
+  "color": "#000CFF"
+ },
+ "125": {
+  "acronym": "4th ventricle",
+  "name": "4th ventricle",
+  "color": "#341D90"
+ },
+ "126": {
+  "acronym": "Dorsal cochlear nucleus, molecular layer",
+  "name": "Dorsal cochlear nucleus, molecular layer",
+  "color": "#5C9CD3"
+ },
+ "127": {
+  "acronym": "Dorsal cochlear nucleus, fusiform and granule layer",
+  "name": "Dorsal cochlear nucleus, fusiform and granule layer",
+  "color": "#00509C"
+ },
+ "128": {
+  "acronym": "Dorsal cochlear nucleus, deep core",
+  "name": "Dorsal cochlear nucleus, deep core",
+  "color": "#C5EEFF"
+ },
+ "129": {
+  "acronym": "acoustic striae",
+  "name": "acoustic striae",
+  "color": "#FFD900"
+ },
+ "130": {
+  "acronym": "trapezoid body",
+  "name": "trapezoid body",
+  "color": "#D5FF00"
+ },
+ "131": {
+  "acronym": "Nucleus of the trapezoid body",
+  "name": "Nucleus of the trapezoid body",
+  "color": "#00FF51"
+ },
+ "132": {
+  "acronym": "Superior paraolivary nucleus",
+  "name": "Superior paraolivary nucleus",
+  "color": "#00EEFF"
+ },
+ "133": {
+  "acronym": "Medial superior olive",
+  "name": "Medial superior olive",
+  "color": "#DBEF3D"
+ },
+ "134": {
+  "acronym": "Lateral superior olive",
+  "name": "Lateral superior olive",
+  "color": "#234CBE"
+ },
+ "135": {
+  "acronym": "Superior periolivary region",
+  "name": "Superior periolivary region",
+  "color": "#019915"
+ },
+ "136": {
+  "acronym": "Ventral periolivary nuclei",
+  "name": "Ventral periolivary nuclei",
+  "color": "#00AEFF"
+ },
+ "137": {
+  "acronym": "Lateral lemniscus, ventral nucleus",
+  "name": "Lateral lemniscus, ventral nucleus",
+  "color": "#FF0073"
+ },
+ "138": {
+  "acronym": "Lateral lemniscus, intermediate nucleus",
+  "name": "Lateral lemniscus, intermediate nucleus",
+  "color": "#AB105B"
+ },
+ "139": {
+  "acronym": "Lateral lemniscus, dorsal nucleus",
+  "name": "Lateral lemniscus, dorsal nucleus",
+  "color": "#6C125B"
+ },
+ "140": {
+  "acronym": "lateral lemniscus, commissure",
+  "name": "lateral lemniscus, commissure",
+  "color": "#FF1D00"
+ },
+ "141": {
+  "acronym": "lateral lemniscus, unspecified",
+  "name": "lateral lemniscus, unspecified",
+  "color": "#FFA600"
+ },
+ "142": {
+  "acronym": "Inferior colliculus, dorsal cortex",
+  "name": "Inferior colliculus, dorsal cortex",
+  "color": "#CEFF8E"
+ },
+ "143": {
+  "acronym": "Inferior colliculus, central nucleus",
+  "name": "Inferior colliculus, central nucleus",
+  "color": "#00EEFE"
+ },
+ "145": {
+  "acronym": "Inferior colliculus, external cortex",
+  "name": "Inferior colliculus, external cortex",
+  "color": "#3088CB"
+ },
+ "146": {
+  "acronym": "inferior colliculus, brachium",
+  "name": "inferior colliculus, brachium",
+  "color": "#B03A48"
+ },
+ "150": {
+  "acronym": "Medial geniculate body, marginal zone",
+  "name": "Medial geniculate body, marginal zone",
+  "color": "#FF2FF2"
+ },
+ "151": {
+  "acronym": "Primary auditory area",
+  "name": "Primary auditory area",
+  "color": "#FFD700"
+ },
+ "152": {
+  "acronym": "Secondary auditory area, dorsal part",
+  "name": "Secondary auditory area, dorsal part",
+  "color": "#F0FFFF"
+ },
+ "153": {
+  "acronym": "Secondary auditory area, ventral part",
+  "name": "Secondary auditory area, ventral part",
+  "color": "#D8BFD8"
+ },
+ "157": {
+  "acronym": "external medullary lamina, auditory radiation",
+  "name": "external medullary lamina, auditory radiation",
+  "color": "#F49CFF"
+ },
+ "158": {
+  "acronym": "Ventral cochlear nucleus, anterior part",
+  "name": "Ventral cochlear nucleus, anterior part",
+  "color": "#2298FF"
+ },
+ "159": {
+  "acronym": "Ventral cochlear nucleus, posterior part",
+  "name": "Ventral cochlear nucleus, posterior part",
+  "color": "#00E6CF"
+ },
+ "160": {
+  "acronym": "Ventral cochlear nucleus, cap area",
+  "name": "Ventral cochlear nucleus, cap area",
+  "color": "#00FF6A"
+ },
+ "162": {
+  "acronym": "Spiral ganglion",
+  "name": "Spiral ganglion",
+  "color": "#B9FFE9"
+ },
+ "163": {
+  "acronym": "Nucleus sagulum",
+  "name": "Nucleus sagulum",
+  "color": "#63CD00"
+ },
+ "164": {
+  "acronym": "Reticular (pre)thalamic nucleus, auditory segment",
+  "name": "Reticular (pre)thalamic nucleus, auditory segment",
+  "color": "#6E00FF"
+ },
+ "180": {
+  "acronym": "lateral olfactory tract",
+  "name": "lateral olfactory tract",
+  "color": "#FF00DD"
+ },
+ "181": {
+  "acronym": "Piriform cortex, layer 1",
+  "name": "Piriform cortex, layer 1",
+  "color": "#00CCFF"
+ },
+ "182": {
+  "acronym": "Piriform cortex, layer 2",
+  "name": "Piriform cortex, layer 2",
+  "color": "#0000FE"
+ },
+ "183": {
+  "acronym": "Piriform cortex, layer 3",
+  "name": "Piriform cortex, layer 3",
+  "color": "#A578DD"
+ },
+ "184": {
+  "acronym": "Nucleus accumbens, core",
+  "name": "Nucleus accumbens, core",
+  "color": "#E6D8FA"
+ },
+ "187": {
+  "acronym": "Substantia nigra, reticular part",
+  "name": "Substantia nigra, reticular part",
+  "color": "#63C512"
+ },
+ "188": {
+  "acronym": "Substantia nigra, compact part",
+  "name": "Substantia nigra, compact part",
+  "color": "#FFFF7F"
+ },
+ "189": {
+  "acronym": "Substantia nigra, lateral part",
+  "name": "Substantia nigra, lateral part",
+  "color": "#009F9F"
+ },
+ "192": {
+  "acronym": "Nucleus accumbens, shell",
+  "name": "Nucleus accumbens, shell",
+  "color": "#582F6C"
+ },
+ "193": {
+  "acronym": "Ventral pallidum",
+  "name": "Ventral pallidum",
+  "color": "#00A2FF"
+ },
+ "195": {
+  "acronym": "Globus pallidus external, medial part",
+  "name": "Globus pallidus external, medial part",
+  "color": "#FF55FF"
+ },
+ "196": {
+  "acronym": "Ventral tegmental area",
+  "name": "Ventral tegmental area",
+  "color": "#7FFFD4"
+ },
+ "197": {
+  "acronym": "Caudate putamen",
+  "name": "Caudate putamen",
+  "color": "#814F9B"
+ },
+ "198": {
+  "acronym": "Globus pallidus external, lateral part",
+  "name": "Globus pallidus external, lateral part",
+  "color": "#C819C8"
+ },
+ "199": {
+  "acronym": "Ventral striatal region, unspecified",
+  "name": "Ventral striatal region, unspecified",
+  "color": "#DC143C"
+ },
+ "200": {
+  "acronym": "Reticular (pre)thalamic nucleus, unspecified",
+  "name": "Reticular (pre)thalamic nucleus, unspecified",
+  "color": "#00D9FF"
+ },
+ "201": {
+  "acronym": "Peripeduncular nucleus",
+  "name": "Peripeduncular nucleus",
+  "color": "#B7C788"
+ },
+ "204": {
+  "acronym": "Pregeniculate nucleus",
+  "name": "Pregeniculate nucleus",
+  "color": "#FF1900"
+ },
+ "205": {
+  "acronym": "Dorsal lateral geniculate nucleus",
+  "name": "Dorsal lateral geniculate nucleus",
+  "color": "#FFE200"
+ },
+ "206": {
+  "acronym": "Lateral habenular nucleus",
+  "name": "Lateral habenular nucleus",
+  "color": "#D96C00"
+ },
+ "207": {
+  "acronym": "Medial habenular nucleus",
+  "name": "Medial habenular nucleus",
+  "color": "#CD0018"
+ },
+ "208": {
+  "acronym": "Posterior intralaminar nucleus",
+  "name": "Posterior intralaminar nucleus",
+  "color": "#E470D6"
+ },
+ "210": {
+  "acronym": "Posterior thalamic nuclear group, triangular part",
+  "name": "Posterior thalamic nuclear group, triangular part",
+  "color": "#FFFFC8"
+ },
+ "211": {
+  "acronym": "Parataenial thalamic nucleus",
+  "name": "Parataenial thalamic nucleus",
+  "color": "#CD0006"
+ },
+ "213": {
+  "acronym": "Anterodorsal thalamic nucleus",
+  "name": "Anterodorsal thalamic nucleus",
+  "color": "#830A79"
+ },
+ "214": {
+  "acronym": "Anteroventral thalamic nucleus, dorsomedial part",
+  "name": "Anteroventral thalamic nucleus, dorsomedial part",
+  "color": "#EF79DA"
+ },
+ "215": {
+  "acronym": "Anteroventral thalamic nucleus, ventrolateral part",
+  "name": "Anteroventral thalamic nucleus, ventrolateral part",
+  "color": "#65238E"
+ },
+ "216": {
+  "acronym": "Rhomboid thalamic nucleus",
+  "name": "Rhomboid thalamic nucleus",
+  "color": "#00FF11"
+ },
+ "218": {
+  "acronym": "Xiphoid thalamic nucleus",
+  "name": "Xiphoid thalamic nucleus",
+  "color": "#23FFEC"
+ },
+ "219": {
+  "acronym": "Reuniens thalamic nucleus",
+  "name": "Reuniens thalamic nucleus",
+  "color": "#FFAA00"
+ },
+ "221": {
+  "acronym": "Ventromedial thalamic nucleus",
+  "name": "Ventromedial thalamic nucleus",
+  "color": "#00B97E"
+ },
+ "222": {
+  "acronym": "Submedius thalamic nucleus",
+  "name": "Submedius thalamic nucleus",
+  "color": "#8200D9"
+ },
+ "223": {
+  "acronym": "Angular thalamic nucleus",
+  "name": "Angular thalamic nucleus",
+  "color": "#8B5D8B"
+ },
+ "227": {
+  "acronym": "Ventral posteromedial thalamic nucleus",
+  "name": "Ventral posteromedial thalamic nucleus",
+  "color": "#FF00FE"
+ },
+ "228": {
+  "acronym": "Laterodorsal thalamic nucleus, dorsomedial part",
+  "name": "Laterodorsal thalamic nucleus, dorsomedial part",
+  "color": "#FF7B00"
+ },
+ "229": {
+  "acronym": "Laterodorsal thalamic nucleus, ventrolateral part",
+  "name": "Laterodorsal thalamic nucleus, ventrolateral part",
+  "color": "#2B991F"
+ },
+ "230": {
+  "acronym": "Posterior thalamic nucleus",
+  "name": "Posterior thalamic nucleus",
+  "color": "#FFFF02"
+ },
+ "231": {
+  "acronym": "Ventrolateral thalamic nucleus",
+  "name": "Ventrolateral thalamic nucleus",
+  "color": "#AAAAFF"
+ },
+ "232": {
+  "acronym": "Mediodorsal thalamic nucleus, lateral part",
+  "name": "Mediodorsal thalamic nucleus, lateral part",
+  "color": "#FF557F"
+ },
+ "233": {
+  "acronym": "Mediodorsal thalamic nucleus, central part",
+  "name": "Mediodorsal thalamic nucleus, central part",
+  "color": "#55AA00"
+ },
+ "235": {
+  "acronym": "Zona incerta, dorsal part",
+  "name": "Zona incerta, dorsal part",
+  "color": "#D8BFD9"
+ },
+ "236": {
+  "acronym": "Zona incerta, ventral part",
+  "name": "Zona incerta, ventral part",
+  "color": "#4BC88A"
+ },
+ "238": {
+  "acronym": "Zona incerta, A13 dopamine cells",
+  "name": "Zona incerta, A13 dopamine cells",
+  "color": "#C2474F"
+ },
+ "239": {
+  "acronym": "pretectothalamic lamina",
+  "name": "pretectothalamic lamina",
+  "color": "#DB8FF7"
+ },
+ "240": {
+  "acronym": "Mediodorsal thalamic nucleus, medial part",
+  "name": "Mediodorsal thalamic nucleus, medial part",
+  "color": "#AAFFFF"
+ },
+ "242": {
+  "acronym": "Paraventricular thalamic nuclei (anterior and posterior)",
+  "name": "Paraventricular thalamic nuclei (anterior and posterior)",
+  "color": "#9C3333"
+ },
+ "246": {
+  "acronym": "Paracentral thalamic nucleus",
+  "name": "Paracentral thalamic nucleus",
+  "color": "#F0F8FF"
+ },
+ "247": {
+  "acronym": "Central medial thalamic nucleus",
+  "name": "Central medial thalamic nucleus",
+  "color": "#E0B640"
+ },
+ "248": {
+  "acronym": "Central lateral thalamic nucleus",
+  "name": "Central lateral thalamic nucleus",
+  "color": "#9932CC"
+ },
+ "249": {
+  "acronym": "external medullary lamina, unspecified",
+  "name": "external medullary lamina, unspecified",
+  "color": "#AAFF00"
+ },
+ "254": {
+  "acronym": "Anteromedial thalamic nucleus",
+  "name": "Anteromedial thalamic nucleus",
+  "color": "#0055FF"
+ },
+ "255": {
+  "acronym": "Interanteromedial thalamic nucleus",
+  "name": "Interanteromedial thalamic nucleus",
+  "color": "#F875DE"
+ },
+ "257": {
+  "acronym": "Zona incerta, rostral part",
+  "name": "Zona incerta, rostral part",
+  "color": "#1E90FF"
+ },
+ "260": {
+  "acronym": "Intermediodorsal thalamic nucleus",
+  "name": "Intermediodorsal thalamic nucleus",
+  "color": "#A0522D"
+ },
+ "266": {
+  "acronym": "Ventral posterior nucleus of the thalamus, parvicellular part",
+  "name": "Ventral posterior nucleus of the thalamus, parvicellular part",
+  "color": "#00FF08"
+ },
+ "267": {
+  "acronym": "Parafascicular thalamic nucleus",
+  "name": "Parafascicular thalamic nucleus",
+  "color": "#FFEFD5"
+ },
+ "268": {
+  "acronym": "Retroreuniens thalamic nucleus",
+  "name": "Retroreuniens thalamic nucleus",
+  "color": "#0000CD"
+ },
+ "270": {
+  "acronym": "superior cerebellar peduncle and prerubral field",
+  "name": "superior cerebellar peduncle and prerubral field",
+  "color": "#D2B68C"
+ },
+ "272": {
+  "acronym": "Intergeniculate leaflet",
+  "name": "Intergeniculate leaflet",
+  "color": "#000080"
+ },
+ "278": {
+  "acronym": "Subparafascicular nucleus",
+  "name": "Subparafascicular nucleus",
+  "color": "#E9967A"
+ },
+ "280": {
+  "acronym": "Fields of Forel",
+  "name": "Fields of Forel",
+  "color": "#FFFAFA"
+ },
+ "281": {
+  "acronym": "Subgeniculate nucleus",
+  "name": "Subgeniculate nucleus",
+  "color": "#9370DB"
+ },
+ "282": {
+  "acronym": "Ethmoid-Limitans nucleus",
+  "name": "Ethmoid-Limitans nucleus",
+  "color": "#833280"
+ },
+ "283": {
+  "acronym": "Lateral posterior thalamic nucleus, lateral part",
+  "name": "Lateral posterior thalamic nucleus, lateral part",
+  "color": "#C7573D"
+ },
+ "284": {
+  "acronym": "Zona incerta, A11 dopamine cells",
+  "name": "Zona incerta, A11 dopamine cells",
+  "color": "#FFB6C1"
+ },
+ "285": {
+  "acronym": "Lateral posterior thalamic nucleus, mediorostral part",
+  "name": "Lateral posterior thalamic nucleus, mediorostral part",
+  "color": "#3CB371"
+ },
+ "286": {
+  "acronym": "Lateral posterior thalamic nucleus, mediocaudal part",
+  "name": "Lateral posterior thalamic nucleus, mediocaudal part",
+  "color": "#FFEBCD"
+ },
+ "287": {
+  "acronym": "Zona incerta, caudal part",
+  "name": "Zona incerta, caudal part",
+  "color": "#FFE4C4"
+ },
+ "290": {
+  "acronym": "intramedullary thalamic area",
+  "name": "intramedullary thalamic area",
+  "color": "#9B946F"
+ },
+ "291": {
+  "acronym": "internal medullary lamina",
+  "name": "internal medullary lamina",
+  "color": "#FF5C0A"
+ },
+ "293": {
+  "acronym": "Ventral anterior thalamic nucleus",
+  "name": "Ventral anterior thalamic nucleus",
+  "color": "#FF8800"
+ },
+ "294": {
+  "acronym": "Ventral posterolateral thalamic nucleus",
+  "name": "Ventral posterolateral thalamic nucleus",
+  "color": "#AB563E"
+ },
+ "295": {
+  "acronym": "Medial geniculate body, dorsal division",
+  "name": "Medial geniculate body, dorsal division",
+  "color": "#EFA300"
+ },
+ "297": {
+  "acronym": "Medial geniculate body, medial division",
+  "name": "Medial geniculate body, medial division",
+  "color": "#0AF4D9"
+ },
+ "298": {
+  "acronym": "Medial geniculate body, ventral division",
+  "name": "Medial geniculate body, ventral division",
+  "color": "#833A1F"
+ },
+ "299": {
+  "acronym": "Medial geniculate body, suprageniculate nucleus",
+  "name": "Medial geniculate body, suprageniculate nucleus",
+  "color": "#0AF496"
+ },
+ "400": {
+  "acronym": "Ventrolateral orbital area",
+  "name": "Ventrolateral orbital area",
+  "color": "#FF0001"
+ },
+ "401": {
+  "acronym": "Lateral orbital area",
+  "name": "Lateral orbital area",
+  "color": "#FFAEC9"
+ },
+ "402": {
+  "acronym": "Ventral orbital area",
+  "name": "Ventral orbital area",
+  "color": "#C8BFE7"
+ },
+ "403": {
+  "acronym": "Medial orbital area",
+  "name": "Medial orbital area",
+  "color": "#3F48CC"
+ },
+ "404": {
+  "acronym": "Dorsolateral orbital area",
+  "name": "Dorsolateral orbital area",
+  "color": "#B97A57"
+ },
+ "405": {
+  "acronym": "Prelimbic area",
+  "name": "Prelimbic area",
+  "color": "#A349A4"
+ },
+ "406": {
+  "acronym": "Secondary motor area",
+  "name": "Secondary motor area",
+  "color": "#00A2E8"
+ },
+ "407": {
+  "acronym": "Frontal association area 3",
+  "name": "Frontal association area 3",
+  "color": "#880015"
+ },
+ "408": {
+  "acronym": "Primary motor area",
+  "name": "Primary motor area",
+  "color": "#99D9EA"
+ },
+ "409": {
+  "acronym": "Agranular insular cortex, ventral area",
+  "name": "Agranular insular cortex, ventral area",
+  "color": "#FFC90E"
+ },
+ "410": {
+  "acronym": "Agranular insular cortex dorsal area",
+  "name": "Agranular insular cortex dorsal area",
+  "color": "#FF7F27"
+ },
+ "411": {
+  "acronym": "Cingulate area 1",
+  "name": "Cingulate area 1",
+  "color": "#008080"
+ },
+ "412": {
+  "acronym": "Claustrum",
+  "name": "Claustrum",
+  "color": "#99D9C8"
+ },
+ "413": {
+  "acronym": "Infralimbic area",
+  "name": "Infralimbic area",
+  "color": "#22B14C"
+ },
+ "414": {
+  "acronym": "Dysgranular insular cortex",
+  "name": "Dysgranular insular cortex",
+  "color": "#FFF200"
+ },
+ "416": {
+  "acronym": "Granular insular cortex",
+  "name": "Granular insular cortex",
+  "color": "#EFE4B0"
+ },
+ "417": {
+  "acronym": "Primary somatosensory area, forelimb representation",
+  "name": "Primary somatosensory area, forelimb representation",
+  "color": "#B90E83"
+ },
+ "418": {
+  "acronym": "Primary somatosensory area, dysgranular zone",
+  "name": "Primary somatosensory area, dysgranular zone",
+  "color": "#ED1C24"
+ },
+ "420": {
+  "acronym": "Primary somatosensory area, face representation",
+  "name": "Primary somatosensory area, face representation",
+  "color": "#FF80C0"
+ },
+ "422": {
+  "acronym": "Secondary somatosensory area",
+  "name": "Secondary somatosensory area",
+  "color": "#C864FA"
+ },
+ "423": {
+  "acronym": "Primary somatosensory area, hindlimb representation",
+  "name": "Primary somatosensory area, hindlimb representation",
+  "color": "#886415"
+ },
+ "424": {
+  "acronym": "Agranular insular cortex, posterior area",
+  "name": "Agranular insular cortex, posterior area",
+  "color": "#B5E61D"
+ },
+ "425": {
+  "acronym": "Primary somatosensory area, barrel field",
+  "name": "Primary somatosensory area, barrel field",
+  "color": "#78B14C"
+ },
+ "427": {
+  "acronym": "Retrosplenial dysgranular area",
+  "name": "Retrosplenial dysgranular area",
+  "color": "#C849A4"
+ },
+ "429": {
+  "acronym": "Primary somatosensory area, trunk representation",
+  "name": "Primary somatosensory area, trunk representation",
+  "color": "#E196C9"
+ },
+ "430": {
+  "acronym": "Retrosplenial granular area",
+  "name": "Retrosplenial granular area",
+  "color": "#1964C8"
+ },
+ "432": {
+  "acronym": "Parietal association cortex, lateral area",
+  "name": "Parietal association cortex, lateral area",
+  "color": "#FFF01D"
+ },
+ "433": {
+  "acronym": "Parietal association cortex, medial area",
+  "name": "Parietal association cortex, medial area",
+  "color": "#6C006C"
+ },
+ "436": {
+  "acronym": "Parietal association cortex, posterior area",
+  "name": "Parietal association cortex, posterior area",
+  "color": "#800040"
+ },
+ "442": {
+  "acronym": "Primary visual area",
+  "name": "Primary visual area",
+  "color": "#543423"
+ },
+ "443": {
+  "acronym": "Secondary visual area, lateral part",
+  "name": "Secondary visual area, lateral part",
+  "color": "#FF6464"
+ },
+ "444": {
+  "acronym": "Temporal association cortex",
+  "name": "Temporal association cortex",
+  "color": "#008000"
+ },
+ "448": {
+  "acronym": "Secondary visual area, medial part",
+  "name": "Secondary visual area, medial part",
+  "color": "#800064"
+ },
+ "500": {
+  "acronym": "Endopiriform nucleus",
+  "name": "Endopiriform nucleus",
+  "color": "#010A64"
+ },
+ "501": {
+  "acronym": "Amygdaloid area, unspecified",
+  "name": "Amygdaloid area, unspecified",
+  "color": "#0214C8"
+ },
+ "502": {
+  "acronym": "Nucleus of the lateral olfactory tract",
+  "name": "Nucleus of the lateral olfactory tract",
+  "color": "#E6B843"
+ }
+}

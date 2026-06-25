@@ -1,0 +1,9 @@
+# Running the viewer only needs Flask:
+flask>=3.0
+
+# The preprocessing / asset-regeneration scripts additionally need:
+numpy>=1.24
+scipy>=1.10
+scikit-image>=0.21
+pandas>=2.0
+openpyxl>=3.1

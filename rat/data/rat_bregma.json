@@ -1,0 +1,17 @@
+{
+ "bregma_x": 0.0,
+ "bregma_y": -0.4,
+ "ml_sign": 1.0,
+ "ap_sign": 1.0,
+ "surface_offset_mm": 0.25,
+ "affine_scale": [
+  0.0390625,
+  0.0390625,
+  0.0390625
+ ],
+ "affine_offset": [
+  -9.53125,
+  -24.3359375,
+  -9.6875
+ ]
+}

@@ -1,0 +1,24 @@
+# ── Large source atlases / volumes (never commit; see docs/OBTAINING_DATA.md) ──
+*.nii
+*.nii.gz
+*.zip
+rat/source/WHS_SD_rat_atlas_v4_pack/
+rat/source/WHS_SD_rat_atlas_v4_pack*
+
+# ── Generated / large region meshes (regenerate with the pipeline scripts) ──
+rat/regions/*.obj
+mouse/regions/*.obj
+!**/.gitkeep
+
+# ── Proprietary TIP.lite (IT'IS Foundation) surfaces — do NOT redistribute ──
+mouse/data/brain_mesh.json
+mouse/data/(Targets_combined)*.json
+
+# ── Editor / OS / Python cruft ──
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+*.tmp
