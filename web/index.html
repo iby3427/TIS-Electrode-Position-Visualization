@@ -34,6 +34,16 @@
   .chip .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .chip .x { cursor: pointer; color: #888; padding: 0 4px; }
   .chip .x:hover { color: #f55; }
+  .chip .ceassign { font-size: 11px; padding: 2px; max-width: 96px; background: #3a4150; color: #cfd6e0;
+    border: 1px solid #4a5363; border-radius: 3px; }
+  /* 8채널 페어 행 */
+  .chhdr { display: flex; gap: 6px; font-size: 10px; color: #8a93a3; margin: 0 0 4px; padding-left: 47px; }
+  .chhdr span { flex: 1; }
+  .chrow { display: flex; align-items: center; gap: 6px; margin-bottom: 5px; }
+  .chrow .chdot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+  .chrow .chlbl { width: 28px; font-size: 12px; color: #aab; flex-shrink: 0; }
+  .chrow .chsel { flex: 1; min-width: 0; padding: 5px; font-size: 12px; }
+  #legend .lgdot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; }
   .toggle { display: flex; align-items: center; gap: 8px; font-size: 13px; margin: 6px 0; }
   #status { font-size: 11px; color: #777; margin-top: 14px; min-height: 14px; }
 
@@ -52,6 +62,29 @@
   #tooltip .t-name { font-weight: bold; font-size: 14px; color: #fff; margin-bottom: 4px; }
   #tooltip .t-row { color: #b9c2d0; }
   #tooltip .t-row b { color: #fff; font-weight: 600; }
+
+  /* 사용자 전극 / 보조 버튼 */
+  button.add.on { background: #1f9d8b; }
+  button.add.on:hover { background: #25b6a1; }
+  button.add.ghost { background: #2C313C; border: 1px solid #444; }
+  button.add.ghost:hover { background: #353b47; }
+
+  /* MRI 단면(3D MPR) 컨트롤 박스 */
+  #slicePanel { position: absolute; top: 12px; left: 12px;
+    display: none; flex-direction: column; gap: 7px; width: 280px;
+    background: rgba(20,22,28,.95); border: 1px solid #3a4150; border-radius: 8px;
+    padding: 12px; z-index: 15; box-shadow: 0 6px 24px rgba(0,0,0,.6); color: #e6e6e6; }
+  #slicePanel .sp-head { display: flex; justify-content: space-between; align-items: center;
+    font-size: 13px; font-weight: 600; color: #cdd6e3; }
+  #slicePanel .sp-x { cursor: pointer; color: #99a; padding: 0 4px; }
+  #slicePanel .sp-x:hover { color: #f55; }
+  #slicePanel .sp-row { display: flex; align-items: center; gap: 7px; }
+  #slicePanel .sp-ck { display: flex; align-items: center; gap: 4px; font-size: 12px; width: 80px; flex-shrink: 0; }
+  #slicePanel .sp-ax { color: #8a93a3; font-size: 10px; }
+  #slicePanel .sp-sl { flex: 1; min-width: 0; }
+  #slicePanel .sp-mm { font-size: 10px; color: #9aa6b6; width: 50px; text-align: right; flex-shrink: 0; }
+  #slicePanel .sp-hint { font-size: 10px; color: #7a8494; line-height: 1.4; }
+  #slicePanel input[type=range] { width: 100%; }
 </style>
 </head>
 <body>
@@ -73,20 +106,33 @@
     <button class="add" id="addRegion">+ 영역 추가</button>
     <div id="regionChips"></div>
 
-    <h4>전극 페어 설정</h4>
-    <div class="row">
-      <div><label class="fld">CH1 + (red)</label><select id="ch1p"></select></div>
-      <div><label class="fld">CH1 − (blue)</label><select id="ch1n"></select></div>
-    </div>
-    <div class="row">
-      <div><label class="fld">CH2 + (red)</label><select id="ch2p"></select></div>
-      <div><label class="fld">CH2 − (blue)</label><select id="ch2n"></select></div>
-    </div>
+    <h4>전극 채널 설정 (최대 8채널)</h4>
+    <div class="chhdr"><span>＋ (red)</span><span>− (blue)</span></div>
+    <div id="channelRows"></div>
 
     <h4>표시 옵션</h4>
     <label class="toggle"><input type="checkbox" id="tgBrain" checked /> 전체 뇌 윤곽</label>
     <label class="toggle"><input type="checkbox" id="tgCortex" checked /> 피질 기준 마스크 (red)</label>
     <label class="toggle"><input type="checkbox" id="tgAllLabels" /> 전체 전극 라벨</label>
+
+    <h4>사용자 전극 (커스텀)</h4>
+    <label class="fld">이름 (선택 — 비우면 자동)</label>
+    <input type="text" id="ceName" placeholder="예: TARGET1" />
+    <button class="add" id="tgPlacement">표면 클릭으로 추가</button>
+    <div class="row" style="margin-top:8px">
+      <div><label class="fld">AP (mm)</label><input type="text" id="ceAP" placeholder="0.0" /></div>
+      <div><label class="fld">ML (mm)</label><input type="text" id="ceML" placeholder="0.0" /></div>
+    </div>
+    <button class="add" id="ceAddCoord" style="margin-top:6px">AP/ML 좌표로 추가 (Rat)</button>
+    <div id="customChips" style="margin-top:8px"></div>
+    <div class="row" style="margin-top:6px">
+      <button class="add ghost" id="ceExport">내보내기(JSON)</button>
+      <label class="add ghost" style="text-align:center; cursor:pointer; margin-top:8px; display:block">
+        가져오기<input type="file" id="ceImport" accept="application/json" style="display:none" /></label>
+    </div>
+
+    <h4>2D 단면 (Rat MRI)</h4>
+    <button class="add" id="openSlices" style="display:none">2D MRI 슬라이스 열기</button>
 
     <div id="status">로딩 중...</div>
   </div>
@@ -98,6 +144,29 @@
       점선 = 채널 페어
     </div>
     <div id="tooltip"></div>
+
+    <div id="slicePanel">
+      <div class="sp-head">
+        <span>MRI 단면 (3D 겹침 · WHS T2*)</span>
+        <span id="sliceClose" class="sp-x">✕</span>
+      </div>
+      <div class="sp-row">
+        <label class="sp-ck"><input type="checkbox" id="chkSag" /> YZ <span class="sp-ax">시상</span></label>
+        <input type="range" id="sldSag" class="sp-sl" min="0" max="0" value="0" /><span id="infoSag" class="sp-mm"></span>
+      </div>
+      <div class="sp-row">
+        <label class="sp-ck"><input type="checkbox" id="chkCor" checked /> XZ <span class="sp-ax">관상</span></label>
+        <input type="range" id="sldCor" class="sp-sl" min="0" max="0" value="0" /><span id="infoCor" class="sp-mm"></span>
+      </div>
+      <div class="sp-row">
+        <label class="sp-ck"><input type="checkbox" id="chkAxi" /> XY <span class="sp-ax">수평</span></label>
+        <input type="range" id="sldAxi" class="sp-sl" min="0" max="0" value="0" /><span id="infoAxi" class="sp-mm"></span>
+      </div>
+      <label class="toggle"><input type="checkbox" id="sliceOverlayChk" checked /> 영역 색칠 오버레이</label>
+      <label class="fld">오버레이 투명도</label>
+      <input type="range" id="sliceOpacity" min="0" max="100" value="60" />
+      <div class="sp-hint">단면의 색칠 영역에 마우스를 올리면 영역명이 표시됩니다.</div>
+    </div>
   </div>
 </div>
 

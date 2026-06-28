@@ -85,3 +85,28 @@ If you have your own **authorized** TIP.lite access, recreate the meshes:
 
 > Please do **not** redistribute IT'IS-derived surface meshes. See
 > `DATA_LICENSE.md` §3.
+
+---
+
+## D. Rat — 2D MRI cross-section viewer (optional)
+
+The **2D MRI 슬라이스** button (Rat mode) overlays three orthogonal MRI cross-sections
+(sagittal / coronal / axial) on the 3D brain, with the atlas regions color-coded and
+hover-to-identify. The slice images are generated from the WHS **T2\*** MRI and are
+**local-only** (~60 MB, not committed). To enable the viewer:
+
+1. Download from NITRC (<https://www.nitrc.org/projects/whs-sd-atlas>) into
+   `rat/source/WHS_SD_rat_atlas_v4_pack/`:
+   - `WHS_SD_rat_T2star_v1.01.nii.gz` (the grayscale MRI, ~900 MB)
+   - `WHS_SD_rat_atlas_v4.nii.gz` + `WHS_SD_rat_atlas_v4.label` (region labels/colors)
+2. Install Pillow if needed: `pip install Pillow`
+3. Generate the slices:
+   ```bash
+   python rat/make_rat_slices.py
+   ```
+   This writes `rat/data/slices/{sag,cor,axi}/*.png` and `rat/data/rat_slices.json`
+   (both gitignored). Reload the viewer — the **2D MRI 슬라이스** button now appears in
+   Rat mode. Without these assets the button stays hidden and the rest of the viewer
+   works normally.
+
+> License: WHS T2\* MRI is **CC BY 4.0** (attribution). See `DATA_LICENSE.md`.

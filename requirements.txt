@@ -7,3 +7,4 @@ scipy>=1.10
 scikit-image>=0.21
 pandas>=2.0
 openpyxl>=3.1
+Pillow>=10.0          # 2D MRI 슬라이스 생성 (rat/make_rat_slices.py)

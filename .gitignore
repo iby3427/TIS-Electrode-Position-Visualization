@@ -10,6 +10,10 @@ rat/regions/*.obj
 mouse/regions/*.obj
 !**/.gitkeep
 
+# ── Generated 2D MRI slice assets (local-only; regenerate with make_rat_slices.py) ──
+rat/data/slices/
+rat/data/rat_slices.json
+
 # ── Proprietary TIP.lite (IT'IS Foundation) surfaces — do NOT redistribute ──
 mouse/data/brain_mesh.json
 mouse/data/(Targets_combined)*.json

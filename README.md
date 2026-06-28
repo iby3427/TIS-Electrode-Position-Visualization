@@ -3,9 +3,10 @@
 An interactive **3D web viewer** for EEG/10‑20 electrode montages on **mouse**
 and **rat** brains, built for **Temporal Interference Stimulation (TIS)**
 planning. It shows the whole-brain surface, anatomical regions, and a
-36-channel electrode montage together, and lets you explore electrode pairs
-(CH1± / CH2±) for TIS targeting. Rendering runs entirely in the browser
-(Three.js / WebGL); a thin Flask server only serves data.
+36-electrode 10‑20 montage together, and lets you configure **up to 8 TIS
+channels (16 electrodes)**, place **custom electrodes**, and view **2D MRI
+cross-sections** overlaid on the 3D brain. Rendering runs entirely in the
+browser (Three.js / WebGL); a thin Flask server only serves data.
 
 > **The point of this project.** Rat EEG montages are reported *inconsistently*
 > across the literature — different electrode counts, different coordinate
@@ -154,6 +155,29 @@ download or a special license, and **both are fully optional**:
 | `Address already in use` / port 8050 busy | Another program (or a previous run) holds the port. Close the old terminal, or edit the port at the bottom of [tis_server.py](tis_server.py). |
 | Browser page is blank | Make sure the `python tis_server.py` terminal is still running, and open the exact address `http://127.0.0.1:8050`. |
 | Rat brain shows but anatomy regions don't | Expected — region overlays need step 6 §A. |
+
+---
+
+## Interactive features
+
+- **Species toggle & navigation** — switch Mouse ↔ Rat (top-left). Drag to rotate, scroll to zoom,
+  right-drag to pan. A clickable **axis gizmo** (bottom-right) snaps the camera to standard views; both
+  species share the same natural rotation feel.
+- **Anatomical regions** — search a region by name/acronym and add it as a colored 3D overlay (mouse
+  regions auto-download from Allen on first use).
+- **TIS channels (up to 8)** — configure up to **8 channels / 16 electrodes**. Each channel's ± pair is
+  drawn with a distinct colored dashed line (electrodes: **+ red, − blue**); unused channels stay
+  `(없음)`. Hover an electrode for its stereotaxic **AP/ML (/LR)** tooltip.
+- **Custom electrodes** — add electrodes at arbitrary positions by **clicking the brain surface** or
+  entering **AP/ML** (rat). They float at the height of neighboring montage electrodes (following the
+  curved electrode shell), can be assigned to any channel pole, and exported/imported as JSON.
+- **2D MRI cross-sections (MPR, rat)** — overlay three orthogonal MRI planes (sagittal / coronal /
+  axial) **inside** the semi-transparent 3D brain. Each plane toggles on/off with its own slider;
+  the WHS atlas regions are color-overlaid (adjustable opacity), and **hovering a region shows its name
+  + color swatch**. Requires regenerating the slice assets — see
+  [docs/OBTAINING_DATA.md](docs/OBTAINING_DATA.md) §D (rat-only, local).
+
+![Rat viewer with the 2D MRI MPR overlay: three orthogonal cross-sections (sagittal/coronal/axial) cutting through the 3D brain with atlas-colored regions, multiple TIS channels, and the axis gizmo](TIS-vis-rat-mri.png)
 
 ---
 
@@ -379,13 +403,15 @@ TIS-Electrode-Position-Visualization/
 ├─ rat/                      🐀 Waxholm Space SD Atlas v4
 │   ├─ data/                 rat_brain_mesh / rat_cortex_mesh / rat_ontology /
 │   │                        rat_electrodes / rat_bregma  (CC BY 4.0 derivatives)
+│   │                        slices/  → 2D MRI cross-sections (local-only, regenerated)
 │   ├─ regions/              222 region meshes (regenerated — not shipped)
 │   ├─ source/               New RAT EEG.xlsx (montage input); atlas NOT shipped
 │   ├─ make_rat_assets.py    NIfTI → meshes, ontology, electrodes (full build)
+│   ├─ make_rat_slices.py    T2* + label NIfTI → 2D MRI slice assets (MPR viewer)
 │   └─ retune_electrodes.py  fast electrode re-projection (bregma tuning)
 ├─ archive/data_extraction/  TIP.lite / Allen extraction scripts (provenance)
 ├─ docs/                     OBTAINING_DATA.md, methodology notes
-├─ TIS-vis-mouse.png  TIS-vis-rat.png   viewer screenshots (shown in README)
+├─ TIS-vis-mouse.png  TIS-vis-rat.png  TIS-vis-rat-mri.png   viewer screenshots (README)
 ├─ README.md  DATA_LICENSE.md  LICENSE  requirements.txt  .gitignore
 ```
 
@@ -402,6 +428,9 @@ python rat/make_rat_assets.py
 
 # Rat: re-place electrodes only (bregma tuning, seconds)
 python rat/retune_electrodes.py
+
+# Rat: 2D MRI cross-section assets for the MPR viewer (needs the WHS T2* NIfTI + Pillow)
+python rat/make_rat_slices.py
 ```
 
 See [docs/OBTAINING_DATA.md](docs/OBTAINING_DATA.md) for where to download the

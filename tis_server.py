@@ -14,6 +14,7 @@ TIS 3D Navigator - 얇은 데이터 서버
 """
 
 import os
+import re
 import urllib.request
 from flask import Flask, send_from_directory, send_file, abort, Response
 
@@ -38,7 +39,12 @@ RAT_DATA_FILES = {
     "rat_cortex_mesh.json",
     "rat_ontology.json",
     "rat_electrodes.json",
+    "rat_bregma.json",
+    "rat_slices.json",
 }
+RAT_SLICE_DIR = os.path.join(RAT_DATA_DIR, "slices")  # 2D MRI 슬라이스 PNG (전처리 생성, 로컬 전용)
+RAT_SLICE_AXES = {"sag", "cor", "axi"}
+SLICE_NAME_RE = re.compile(r"^\d+_(mri|lbl)\.png$")
 
 app = Flask(__name__)
 
@@ -57,7 +63,21 @@ def web_assets(filename):
 def rat_data_file(name):
     if name not in RAT_DATA_FILES:
         abort(404)
-    return send_file(os.path.join(RAT_DATA_DIR, name))
+    path = os.path.join(RAT_DATA_DIR, name)
+    if not os.path.exists(path):
+        abort(404)   # rat_slices.json 등 미생성 시 깔끔히 404 (뷰어는 우아하게 비활성)
+    return send_file(path)
+
+
+@app.route("/data/rat/slices/<axis>/<name>")
+def rat_slice_file(axis, name):
+    # 2D MRI 슬라이스 PNG: 전처리(make_rat_slices.py)로 생성된 파일만 제공
+    if axis not in RAT_SLICE_AXES or not SLICE_NAME_RE.match(name):
+        abort(404)
+    path = os.path.join(RAT_SLICE_DIR, axis, name)
+    if not os.path.exists(path):
+        abort(404)
+    return send_file(path)
 
 
 @app.route("/data/<path:name>")
